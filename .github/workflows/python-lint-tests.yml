@@ -36,3 +36,6 @@ jobs:
     - name: Run tests
       run: |
         python -m unittest discover tests
+    - name: TruffleHog OSS
+      uses: trufflesecurity/trufflehog@v3.54.4
+    
