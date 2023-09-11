@@ -51,4 +51,40 @@ To run this masterpiece:
 3. Navigate to the `HelloWorldApp` directory.
 4. Run `main.py`.
 
+**Diagram**
+```mermaid
+graph TD
+
+  main[main.py]
+  settings[settings.py]
+  dispServ[display_service.py]
+  msgFact[message_factory.py]
+  helloMsg[hello_message.py]
+
+  subgraph config
+    settings
+  end
+
+  subgraph services
+    dispServ --> msgFact
+  end
+
+  subgraph factories
+    msgFact --> helloMsg
+  end
+
+  subgraph data
+    helloMsg --> helloMsgProd[HelloMessageProduction]
+    helloMsg --> helloMsgDebug[HelloMessageDebug]
+  end
+
+  main --> dispServ
+  msgFact --> settings
+
+  class config fill:#f9d0c4,stroke:#333,stroke-width:2px;
+  class services fill:#c2c4e2,stroke:#333,stroke-width:2px;
+  class factories fill:#e2e2c4,stroke:#333,stroke-width:2px;
+  class data fill:#c4d8e2,stroke:#333,stroke-width:2px;
+```
+
 **Disclaimer:** Running this might make you rethink your software design choices.
