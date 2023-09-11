@@ -11,7 +11,6 @@ class TestMessageFactory(unittest.TestCase):
         message = factory.create_message()
         self.assertIsInstance(message, HelloMessageProduction)
 
-    
     def test_create_message_debug(self):
         settings.APP_MODE = "DEBUG"
         factory = MessageFactory()
