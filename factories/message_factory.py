@@ -1,6 +1,7 @@
 from config import settings
 from data.messages import hello_message
 
+
 class MessageFactory:
     def create_message(self):
         if settings.APP_MODE == "PRODUCTION":

@@ -1,8 +1,8 @@
 import unittest
 from data.messages.hello_message import HelloMessageProduction, HelloMessageDebug
 
-class TestHelloMessage(unittest.TestCase):
 
+class TestHelloMessage(unittest.TestCase):
     def test_hello_message_production_content(self):
         message = HelloMessageProduction()
         self.assertEqual(message.get_content(), "Hello, World!")
