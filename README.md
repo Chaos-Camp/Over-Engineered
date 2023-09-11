@@ -1,5 +1,5 @@
 # Hello World Over-Engineered
-
+[![Python Unit Tests and Linting](https://github.com/Chaos-Camp/Over-Engineered/actions/workflows/python-lint-tests.yml/badge.svg)](https://github.com/Chaos-Camp/Over-Engineered/actions/workflows/python-lint-tests.yml)
 > Because sometimes, "print('Hello, World!')" just isn't enough.
 
 ## Table of Contents
